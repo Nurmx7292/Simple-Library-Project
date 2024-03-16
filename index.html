@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        Library
+    </header>
+    <div class="wrapper">
+        <div class="addingBook" onclick="toAdd()">Add book <br><big><ion-icon name="add-circle-outline"></ion-icon></big></div>
+        
+        <div class="books">
+            <div class="book">
+                <div class="title">
+                    Title
+                </div>
+                <div class="title">
+                    Author
+                </div>
+                <div class="definition">
+                    Definition...
+                </div>
+                <div class="buttons">
+                    <button class="status" onclick=status(this)>
+                        Read
+                    </button>
+                    <button class="remove" onclick=remove(event)>
+                        Remove
+                    </button>
+                </div>
+            </div>
+            <div class="book">
+                <div class="title">
+                    Title
+                </div>
+                <div class="title">
+                    Author
+                </div>
+                <div class="definition">
+                    Definition...
+                </div>
+                <div class="buttons">
+                    <button class="status" onclick=status(this)>
+                        Read
+                    </button>
+                    <button class="remove" onclick=remove(event)>
+                        Remove
+                    </button>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div class="modal">
+        <div class="adding_window">
+            <form action="" onsubmit="return addingBook(event)">
+                <div class="text">
+                    Add new book
+                </div>
+                <input type="text" class="Title" placeholder="Title..." required id="title">
+                <input type="text" class="Author" placeholder="Author..." required id="author">
+                <textarea name="1Description" id="descr" cols="22" rows="3" class="Description" placeholder="Short description..."></textarea>
+                <div class="is-read">
+                    <label for="is-read">Have you read it?</label>
+                    <input class="checkbox" type="checkbox" id="isRead"/>
+                  </div>
+                <input type="submit" class="submit" value="Add">
+            </form>
+        </div>
+        <div class="modal_overlay"></div>
+    </div>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
